@@ -1,0 +1,24 @@
+[project]
+name = "frist_prorject"
+version = "0.1.0"
+description = "frist_prorject using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.193.2,<1.0.0",
+    "fastapi>=0.118.0",
+]
+
+[project.scripts]
+frist_prorject = "frist_prorject.main:run"
+run_crew = "frist_prorject.main:run"
+train = "frist_prorject.main:train"
+replay = "frist_prorject.main:replay"
+test = "frist_prorject.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
