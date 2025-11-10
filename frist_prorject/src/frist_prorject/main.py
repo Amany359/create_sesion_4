@@ -66,3 +66,9 @@ def test():
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")
+from frist_prorject.tools.custom_tool import StockInfoTool
+
+if __name__ == "__main__":
+    tool = StockInfoTool()
+    result = tool._run("AAPL", "5d")  # مثال لسهم Apple آخر 5 أيام
+    print(result)
